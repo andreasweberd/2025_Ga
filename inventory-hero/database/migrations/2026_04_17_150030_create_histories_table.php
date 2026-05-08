@@ -13,6 +13,20 @@ return new class extends Migration
     {
         Schema::create('histories', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('employee_id')
+                ->constrained('employees')
+                ->onDelete('cascade');
+
+            $table->foreignId('device_id')
+                ->constrained('devices')
+                ->onDelete('cascade');
+
+            $table->date('date_of_checkout');
+
+            $table->date('date_of_return')
+                ->nullable();
+
             $table->timestamps();
         });
     }

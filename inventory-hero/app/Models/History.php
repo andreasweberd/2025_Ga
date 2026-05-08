@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class History extends Model
 {
-    //
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+    public function hardware()
+    {
+        return $this->belongsTo(Device::class);
+    }
 }
