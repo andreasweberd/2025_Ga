@@ -1,0 +1,4 @@
+Aufgabe 1:
+Solange Historie als letztes erstellt wird ist die Reihenfolge vom Rest egal. 
+Historie muss als letztes angelgt werden da dieser 2 Fremdschlüssel beinhaltet und diese nur refrenzieren kann wenn diese auch angelegt sind.
+

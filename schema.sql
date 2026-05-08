@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS raum CASCADE;
+DROP TABLE IF EXISTS mitarbeiter CASCADE;
+DROP TABLE IF EXISTS hardware CASCADE;
+DROP TABLE IF EXISTS historie CASCADE;
+
+CREATE TABLE raum (
+    RaumNR SERIAL PRIMARY KEY NOT NULL,
+    Etage VARCHAR(255) NOT NULL,
+    Bezeichnung VARCHAR(255)
+);
+
+CREATE TABLE mitarbeiter (
+    PersonalNR SERIAL PRIMARY KEY NOT NULL,
+    Vorname VARCHAR(255) NOT NULL,
+    Nachname VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE hardware (
+    InventarID SERIAL PRIMARY KEY NOT NULL,
+    Kaufdatum DATE NOT NULL,
+    Statusbitmaske INT NOT NULL
+);
+
+CREATE TABLE historie (
+    HistorieID SERIAL PRIMARY KEY NOT NULL,
+    InventarID INT REFERENCES hardware(InventarID) NOT NULL,
+    PersonalNR INT REFERENCES mitarbeiter(PersonalNR) NOT NULL,
+    StartDatum DATE NOT NULL,
+    EndDatum DATE
+);
