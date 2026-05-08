@@ -1,0 +1,52 @@
+insert into raum (nummer, etage, bezeichnung) values
+(1, -1, 'Lager.01'),
+(2, -1, 'Technikraum'),
+(101, 0, 'Empfang'),
+(102, 0, 'Besprechung'),
+(103, 0, 'Support'),
+(201, 1, 'Entwicklung'),
+(202, 1, 'Vertrieb'),
+(203, 1, 'Marketing'),
+(204, 1, 'Geschftsfhrung'),
+(205, 1, 'Schulungsraum');
+
+insert into personal (vorname, nachname) values
+('Max', 'Mustermann'),
+('Anna', 'Schneider'),
+('Lukas', 'Meyer'),
+('Sophie', 'Weber'),
+('Daniel', 'Fischer'),
+('Laura', 'Wagner'),
+('Tim', 'Becker'),
+('Julia', 'Hoffmann'),
+('Felix', 'Koch'),
+('Emma', 'Richter');
+
+insert into hardware (raumid, bezeichnung, kaufdatum, statusbit) values
+(6, 'Dell Latitude 5520', '2023-01-15', B'0001'),
+(6, 'HP EliteBook 840', '2022-11-20', B'0000'),
+(7, 'Lenovo ThinkPad T14', '2021-06-10', B'0001'),
+(5, 'Samsung Monitor S24', '2020-09-05', B'0000'),
+(5, 'LG UltraWide 29', '2022-02-14', B'0100'),
+(4, 'Canon Pixma G6050', '2019-12-01', B'0010'),
+(4, 'HP LaserJet Pro', '2023-03-22', B'0001'),
+(8, 'Dell UltraSharp U2723', '2021-08-30', B'0000'),
+(9, 'Apple MacBook Pro', '2022-05-11', B'0001'),
+(10, 'Epson Beamer X500', '2020-01-17', B'1000'),
+(3, 'Microsoft Surface Laptop 5', '2023-07-01', B'0000'),
+(2, 'Dell PowerEdge Server', '2018-04-18', B'0100'),
+(1, 'Synology NAS DS920+', '2017-10-09', B'1010'),
+(7, 'Lenovo ThinkPad X1', '2024-01-05', B'0001'),
+(8, 'Epson EcoTank ET-2850', '2023-09-19', B'0000');
+
+insert into history (personalid, hardwareid, von, bis) values
+(1, 1, '2025-01-10 08:00:00', '2025-01-15 17:00:00'),
+(2, 2, '2025-02-01 09:30:00', null),
+(3, 3, '2025-02-11 10:00:00', '2025-02-20 15:45:00'),
+(4, 4, '2025-03-05 11:15:00', null),
+(5, 5, '2025-03-10 14:00:00', '2025-03-12 16:00:00'),
+(6, 7, '2025-03-18 08:45:00', null),
+(7, 8, '2025-04-01 13:00:00', '2025-04-03 09:00:00'),
+(8, 9, '2025-04-07 10:20:00', null),
+(9, 11, '2025-04-15 07:50:00', '2025-04-18 12:00:00'),
+(10, 14, '2025-04-20 09:10:00', null);
